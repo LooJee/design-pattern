@@ -1,6 +1,6 @@
-package simpleFactory
+package factory
 
-type Car interface {
+type ICar interface {
 	Name() string
 }
 
@@ -25,7 +25,10 @@ func (h *Honda) Name() string {
 	return "honda"
 }
 
-func CarFactory(brand string) Car {
+/*
+simple factory
+*/
+func CarFactory(brand string) ICar {
 	switch brand {
 	case "benz":
 		return &Benz{}
