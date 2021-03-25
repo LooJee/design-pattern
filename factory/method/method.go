@@ -13,19 +13,19 @@ type HondaFactory struct {
 }
 
 func (f HondaFactory) Produce() simple.ICar {
-	return &simple.Honda{}
+	return simple.NewHonda()
 }
 
 type BenzFactory struct {
 }
 
 func (f BenzFactory) Produce() simple.ICar {
-	return &simple.Benz{}
+	return simple.NewBenz()
 }
 
 type AudiFactory struct {
 }
 
 func (f AudiFactory) Produce() simple.ICar {
-	return &simple.Audi{}
+	return simple.NewAudi()
 }
