@@ -8,17 +8,17 @@ import (
 func TestMethod(t *testing.T) {
 	people := factory.NewPeople("小明")
 
-	people.TakeCarFromFactory(HondaFactory{})
+	people.TakeCar(CarShop{}.Brand("honda").Produce())
 	if people.GetCar().Name() != "honda" {
 		t.Fatalf("name of honda is not equal")
 	}
 
-	people.TakeCarFromFactory(BenzFactory{})
+	people.TakeCar(CarShop{}.Brand("benz").Produce())
 	if people.GetCar().Name() != "benz" {
 		t.Fatalf("name of benz is not equal")
 	}
 
-	people.TakeCarFromFactory(AudiFactory{})
+	people.TakeCar(CarShop{}.Brand("audi").Produce())
 	if people.GetCar().Name() != "audi" {
 		t.Fatalf("name of audi is not equal")
 	}
