@@ -1,9 +1,12 @@
-package factory
+package simple
 
-import "testing"
+import (
+	"design-pattern/factory"
+	"testing"
+)
 
 func TestCarFactory(t *testing.T) {
-	people := NewPeople("小明")
+	people := factory.NewPeople("小明")
 
 	people.TakeCar(CarFactory("bmw"))
 	if people.GetCar() != nil {

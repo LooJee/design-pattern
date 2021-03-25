@@ -1,9 +1,12 @@
-package factory
+package method
 
-import "testing"
+import (
+	"design-pattern/factory"
+	"testing"
+)
 
 func TestMethod(t *testing.T) {
-	people := NewPeople("小明")
+	people := factory.NewPeople("小明")
 
 	people.TakeCarFromFactory(HondaFactory{})
 	if people.GetCar().Name() != "honda" {

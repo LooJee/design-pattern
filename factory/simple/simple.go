@@ -1,4 +1,4 @@
-package factory
+package simple
 
 type ICar interface {
 	Name() string
