@@ -1,19 +1,11 @@
 package abstract
 
 import (
-	"design-pattern/factory"
 	"testing"
 )
 
 func TestCarShop_Brand(t *testing.T) {
-	people := factory.People{}
-
-	people.TakeCar(CarShop{}.Brand("honda").ProduceRoadster())
-	if people.GetCar() == nil {
-		t.Fatalf("honda shouldn't be nil")
-	} else if people.GetCar().Name() != "honda_roadster" {
-		t.Fatalf("name of honda_roadster is not equal")
-	}
+	people := NewPeople("小明")
 
 	people.TakeCar(CarShop{}.Brand("benz").ProduceRoadster())
 	if people.GetCar() == nil {

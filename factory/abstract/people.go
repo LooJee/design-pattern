@@ -1,8 +1,6 @@
-package factory
+package abstract
 
-import (
-	"design-pattern/factory/simple"
-)
+import "design-pattern/factory/simple"
 
 type People struct {
 	name string

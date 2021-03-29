@@ -26,17 +26,6 @@ func NewAudi() *Audi {
 	return &Audi{}
 }
 
-type Honda struct {
-}
-
-func (h *Honda) Name() string {
-	return "honda"
-}
-
-func NewHonda() *Honda {
-	return &Honda{}
-}
-
 /*
 simple factory
 */
@@ -46,8 +35,6 @@ func CarFactory(brand string) ICar {
 		return NewBenz()
 	case "audi":
 		return NewAudi()
-	case "honda":
-		return NewHonda()
 	default:
 		return nil
 	}

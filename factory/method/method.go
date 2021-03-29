@@ -9,13 +9,6 @@ type ICarFactory interface {
 	Produce() simple.ICar
 }
 
-type HondaFactory struct {
-}
-
-func (f HondaFactory) Produce() simple.ICar {
-	return simple.NewHonda()
-}
-
 type BenzFactory struct {
 }
 
@@ -44,8 +37,6 @@ type CarShop struct {
 
 func (shop CarShop) Brand(brand string) ICarFactory {
 	switch brand {
-	case "honda":
-		return HondaFactory{}
 	case "benz":
 		return BenzFactory{}
 	case "audi":

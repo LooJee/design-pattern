@@ -1,12 +1,11 @@
 package simple
 
 import (
-	"design-pattern/factory"
 	"testing"
 )
 
 func TestCarFactory(t *testing.T) {
-	people := factory.NewPeople("小明")
+	people := NewPeople("小明")
 
 	people.TakeCar(CarFactory("bmw"))
 	if people.GetCar() != nil {
@@ -25,12 +24,5 @@ func TestCarFactory(t *testing.T) {
 		t.Fatalf("benz should be a valid car")
 	} else if people.GetCar().Name() != "benz" {
 		t.Fatalf("name of benz is not equal")
-	}
-
-	people.TakeCar(CarFactory("honda"))
-	if people.GetCar() == nil {
-		t.Fatalf("honda should be a valid car")
-	} else if people.GetCar().Name() != "honda" {
-		t.Fatalf("name of honda is not equal")
 	}
 }

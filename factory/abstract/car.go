@@ -7,20 +7,6 @@ type IRoadster interface {
 	Sport()
 }
 
-type HondaRoadster struct {
-}
-
-func (r HondaRoadster) Sport() {
-}
-
-func (r HondaRoadster) Name() string {
-	return "honda_roadster"
-}
-
-func NewHondaRoadster() *HondaRoadster {
-	return &HondaRoadster{}
-}
-
 type BenzRoadster struct {
 
 }
